@@ -1,0 +1,2 @@
+class CreateRename < ApplicationRecord
+end
