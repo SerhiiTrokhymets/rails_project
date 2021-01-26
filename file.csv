@@ -1,0 +1,5 @@
+id,first_name,last_name,personal_data,password,email,birthday,created_at,updated_at
+2,Serhii,Trhokhymets,"{""username""=>""Horizon""}",22222222,asdf@mqil.com,1993-11-25,2021-01-24 19:40:13 UTC,2021-01-24 19:40:13 UTC
+1,Grisha,Pipipenko,"{""username""=>""Booldog""}",11111111,efefef@mail.com,1990-04-12,2021-01-24 18:36:31 UTC,2021-01-24 21:02:43 UTC
+3,Ivan,Smirnov,"{""username""=>""Horizont""}",22222223,assss@mqil.com,1993-11-25,2021-01-24 19:30:13 UTC,2021-01-24 19:40:10 UTC
+4,Kolya,Pilipenko,"{""username""=>""Booldog2""}",11111112,rrrrrr@mail.com,1990-04-12,2021-01-24 18:43:31 UTC,2021-01-24 21:02:10 UTC

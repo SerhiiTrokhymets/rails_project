@@ -18,4 +18,8 @@ class User < ApplicationRecord
   def full_name
     puts "#{last_name}  #{first_name[0]}"
   end
+
+  # def to_csv
+  #   [id, first_name, last_name, birthday, password, email]
+  # end
 end
