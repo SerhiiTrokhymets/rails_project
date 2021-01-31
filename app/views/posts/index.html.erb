@@ -1,0 +1,5 @@
+<h2> All posts </h2>
+<% @posts.each do |post| %>
+  Id: <%= post.id %><br>
+  <a href="http://127.0.0.1:3000/posts/<%=post.id%>">Name post: <%=post.title %></a><br>
+<% end %>

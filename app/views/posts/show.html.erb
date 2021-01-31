@@ -1,0 +1,10 @@
+<h2> Title: <%= @post.title %></h2>
+<p> Body: <%= @post.body %></p><br>
+
+<p><img src="<%=@image.url %>" alt="Image"></p>
+
+
+<p>
+  <%= social_share_button_tag(@post.title) %>
+
+</p>
