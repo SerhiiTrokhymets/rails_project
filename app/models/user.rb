@@ -13,7 +13,7 @@ class User < ApplicationRecord
   validates :password, :email, presence: true
   validates :personal_data, uniqueness: true, presence: true
 
-  scope :adults, -> { where('birthday >= ?', 18.years.from_now) }
+  scope :adult, -> { where('birthday <= ?', 18.years.ago) }
 
   def full_name
     puts "#{last_name}  #{first_name[0]}"
