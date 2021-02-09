@@ -6,4 +6,7 @@ class Blog::Entities::Posts < Grape::Entity
   expose :published_at, as: :published
   expose :body, as: :description
   expose :title
+  expose :images, using: Blog::Entities::Images do |post|
+    post.user.images
+  end
 end
