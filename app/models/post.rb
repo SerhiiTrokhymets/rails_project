@@ -2,13 +2,13 @@
 class Post < ApplicationRecord
   has_many :images, :as => :imageable
   belongs_to :user
-  scope :published, -> { where.not(published_at: nil) }
+  scope :publish, -> { where.not(published_at: nil) }
 
-  def published
+  def publish
     update_attribute(:published_at, DateTime.now)
   end
 
-  def unpublished
+  def unpublish
     update_attribute(:published_at, nil)
   end
 end
