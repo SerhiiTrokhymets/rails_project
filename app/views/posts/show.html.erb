@@ -1,10 +1,7 @@
-<h2> Title: <%= @post.title %></h2>
-<p> Body: <%= @post.body %></p><br>
-
-<p><img src="<%=@image.url %>" alt="Image"></p>
-
-
-<p>
-  <%= social_share_button_tag(@post.title) %>
-
-</p>
+<p>Post user name <%= @user.first_name%></p>
+<ul>
+  <li>Title - <%= @post.title %></li>
+  <li>Body - <%= @post.body %></li>
+  <li>Published_at - <%= @post.published_at %></li>
+  <%=link_to "Изменить пост", edit_post_path %>
+</ul>
