@@ -16,17 +16,23 @@ class Blog::Posts < Grape::API
   end
 
   namespace :posts do
+    params do
+      requires :token, type: String
+    end
     get do
+      user = User.find(decode['user_id'])
+      error!('Not find user', 404) unless user
       posts = Post.publish
       present posts, with: Blog::Entities::AllPosts
     end
 
     params do
-      requires :user_id
+      requires :token, type: String
     end
 
     get ':post_id' do
-      user = User.find_by(id: params[:user_id])
+      # user = User.find_by(id: params[:user_id])
+      user = User.find(decode['user_id'])
       error!('Not find user', 404) unless user
       post = user.posts.find_by(id: params[:post_id])
       error!('Not find post', 404) unless post
@@ -41,14 +47,21 @@ class Blog::Posts < Grape::API
       post.update(declared_params)
     end
 
+    params do
+      requires :token, type: String
+    end
     post ':post_id/publish' do
-      post = Post.find_by(id: params[:post_id], user_id: params[:user_id])
+      user = User.find(decode['user_id'])
+      post = Post.find_by(id: params[:post_id], user_id: user.id)
       error! ('Not find user or post') unless post
       post.publish
     end
 
+    params do
+      requires :token, type: String
+    end
     post ':post_id/unpublish' do
-      post = Post.find_by(id: params[:post_id], user_id: params[:user_id])
+      post = Post.find_by(id: params[:post_id], user_id: user.id)
       error! ('Not find user or post') unless post
       post.unpublish
     end
@@ -59,11 +72,13 @@ class Blog::Posts < Grape::API
     end
 
     params do
-      requires :user_id
+      requires :token, type: String
     end
     delete ':post_id' do
-      post = Post.find_by(id: params[:post_id], user_id: params[:user_id])
-      error! ("Not find post in user #{User.find_by(id: params[:user_id]).first_name}") unless post
+      # post = Post.find_by(id: params[:post_id], user_id: params[:user_id])
+      user = User.find(decode['user_id'])
+      post = Post.find_by(id: params[:post_id], user_id: user.id)
+      error! ("Not find post in user #{user.first_name}") unless post
       post.destroy
     end
 

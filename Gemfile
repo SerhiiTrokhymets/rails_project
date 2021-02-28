@@ -16,9 +16,20 @@ gem 'coffee-rails', '~> 5.0'
 gem 'sass-rails', '>= 6'
 gem 'sprockets', '~> 4'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
+gem 'pry', '~> 0.13.1'
+
+#Api
 gem 'grape', '~> 1.5', '>= 1.5.1'
 gem 'grape-entity', '~> 0.8.2'
 gem 'grape-swagger', '~> 1.3', '>= 1.3.1'
+
+#Admin panel
+gem 'devise'
+gem 'activeadmin'
+
+#Auth for api
+gem 'jwt'
+gem 'sorcery'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

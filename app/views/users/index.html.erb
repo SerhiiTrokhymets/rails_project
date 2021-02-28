@@ -1,9 +1,0 @@
-<h3> All Users </h3>
-<% @users.each do |user| %>
-  <p></p>
-  <ul>
-    <li><%=link_to user.first_name + user.last_name, user_path(user) %></li>
-    <li>ID<%= user.id %></li>
-  </ul>
-<% end %>
-<p><%= link_to "Создать пользователя", new_user_url %></p>
