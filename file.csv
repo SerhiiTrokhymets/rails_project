@@ -1,5 +1,9 @@
-id,first_name,last_name,personal_data,password,email,birthday,created_at,updated_at
-2,Serhii,Trhokhymets,"{""username""=>""Horizon""}",22222222,asdf@mqil.com,1993-11-25,2021-01-24 19:40:13 UTC,2021-01-24 19:40:13 UTC
-1,Grisha,Pipipenko,"{""username""=>""Booldog""}",11111111,efefef@mail.com,1990-04-12,2021-01-24 18:36:31 UTC,2021-01-24 21:02:43 UTC
-3,Ivan,Smirnov,"{""username""=>""Horizont""}",22222223,assss@mqil.com,1993-11-25,2021-01-24 19:30:13 UTC,2021-01-24 19:40:10 UTC
-4,Kolya,Pilipenko,"{""username""=>""Booldog2""}",11111112,rrrrrr@mail.com,1990-04-12,2021-01-24 18:43:31 UTC,2021-01-24 21:02:10 UTC
+id,first_name,last_name,personal_data,email,birthday,created_at,updated_at,crypted_password,salt
+6,Марго,Трохимець,Мокра,sss@margo.com,1994-04-14,2021-02-21 13:21:35 UTC,2021-02-21 13:21:35 UTC,,
+1,Grisha,Pilipenko,username Booldog,efefef@mail.com,1990-04-12,2021-01-24 18:36:31 UTC,2021-02-21 15:54:07 UTC,,
+4,Kolya,Smirnov,"{""username""=>""Booldog2""}",rrrrrr@mail.com,1990-04-12,2021-01-24 18:43:31 UTC,2021-02-21 15:54:41 UTC,,
+3,Ivan,Smirnov,Coder,Ivan@gmail.com,1989-07-12,2021-01-24 19:30:13 UTC,2021-02-21 16:00:13 UTC,,
+2,Serhii,Kolobok,username Horizon,asdf@mqil.com,1992-11-01,2021-01-24 19:40:13 UTC,2021-02-21 16:15:10 UTC,,
+7,Oksana,Skalko,OS,o111s@mail.com,1994-04-14,2021-02-24 19:30:27 UTC,2021-02-24 19:37:26 UTC,,
+8,Lubov,Trokhymets,Mom,lubov@mail.com,1970-07-01,2021-02-27 10:32:09 UTC,2021-02-27 10:32:09 UTC,,
+5,Трохимец,Сергей,sdfghjkl,serheyfly4410@gmail.com,1993-11-25,2021-02-21 13:14:51 UTC,2021-02-27 13:59:53 UTC,$2a$10$t.PGdKj8fmU1zQsnehWSI.Ugw1kdNywG6x6fSAdwtSHUOscyj6vky,g7uem6-7FnjbysnF7jjM

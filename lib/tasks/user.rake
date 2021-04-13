@@ -12,10 +12,6 @@ namespace :user do
 
   desc 'TODO'
   task export: :environment do
-    # CSV.open("file.csv", "wb") do |csv|
-    #   csv << ["id", "fist_name", "last_name", "birthday", "password", "email"]
-    #   User.all.each {|user|  csv << user.to_csv}
-    # end
     name_file = 'file.csv'
     CSV.open(name_file, 'wb') do |csv|
       csv << User.all.first.attributes.map { |a,v| a }
@@ -24,5 +20,4 @@ namespace :user do
       end
     end
   end
-
 end
